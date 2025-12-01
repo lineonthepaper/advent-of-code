@@ -15,24 +15,43 @@ function process() {
 }
 
 function rotate(direction, value, current, result) {
-    for (let i = 0; i < value; i++) {
-        if (direction === "L") {
-            current--;
-        }
-        else {
-            current++;
-        }
-        current %= 100;
+    let numTimes = 0;
+
+    if (direction === "L") {
         if (current === 0) {
-            result++;
+            numTimes--;
+        }
+        current -= value;
+    } else {
+        current += value;
+    }
+    
+    while (current < 0) {
+        current += 100;
+        numTimes++;
+    }
+    
+    while (current > 100) {
+        current -= 100;
+        numTimes++;
+    }
+
+    if (current % 100 === 0) {
+        current = 0;
+        numTimes++;
+    }
+
+    if (direction === "L") {
+        if (current === 0 && numTimes === 0) {
+            numTimes++;
         }
     }
 
     // console.log(direction + value);
     // console.log("Now points at: " + current);
-    // console.log("Num times passed 0: " + numTimes);
+    // console.log("Num times passed 0: " + (numTimes < 0 ? 0 : numTimes));
     // console.log("-----");
 
-    return [current, result];
+    return [current, result + (numTimes < 0 ? 0 : numTimes)];
     
 }
