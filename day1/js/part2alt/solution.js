@@ -16,43 +16,37 @@ function process() {
 
 function rotate(direction, value, left, right, result) {
     let numTimes = 0;
+    let temp;
+    let x;
+    let y;
+
     if (direction === "L") {
-        let oldRight = right;
-        let remainder = Math.min(right, value);
-        left += (value - remainder);
-        right -= remainder;
-        if (right === 0 && oldRight !== 0) {
-            numTimes++;
-        }
-        numTimes += Math.floor(left / 100);
+        temp = right;
+        y = right;
+        x = left;
+    } else {
+        temp = left;
+        y = left;
+        x = right;
     }
-    if (direction === "R") {
-        let oldLeft = left;
-        let remainder = Math.min(left, value);
-        right += (value - remainder);
-        left -= remainder;
-        if (left === 0 && oldLeft !== 0) {
-            numTimes++;
-        }
-        numTimes += Math.floor(right / 100);
+
+    let remainder = Math.min(y, value);
+    
+    x += (value - remainder);
+    y -= remainder;
+
+    if (y === 0 && temp !== 0) {
+        numTimes++;
     }
-    left %= 100;
-    right %= 100;
 
-    // console.log(direction + value);
-    // console.log("New left: " + left + ", new right: " + right);
-    // console.log("Now points at: " + convertToRawValue(left, right));
-    // console.log("Num times passed 0: " + numTimes);
-    // console.log("-----");
+    numTimes += Math.floor(x / 100);
 
-    return [left, right, result + numTimes];    
+    x %= 100;
+
+    if (direction === "L") {
+        return [x, y, result + numTimes];
+    } else {
+        return [y, x, result + numTimes];
+    }
+
 }
-
-// function convertToRawValue(left, right) {
-//     if (left > 0) {
-//         return 100 - left;
-//     }
-//     else {
-//         return right;
-//     }
-// }
