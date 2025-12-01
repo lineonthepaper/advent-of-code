@@ -15,7 +15,6 @@ function process() {
 }
 
 function rotate(direction, value, current, result) {
-    let numTimes = 0;
     for (let i = 0; i < value; i++) {
         if (direction === "L") {
             current--;
@@ -25,7 +24,7 @@ function rotate(direction, value, current, result) {
         }
         current %= 100;
         if (current === 0) {
-            numTimes++;
+            result++;
         }
     }
 
@@ -34,6 +33,6 @@ function rotate(direction, value, current, result) {
     // console.log("Num times passed 0: " + numTimes);
     // console.log("-----");
 
-    return [current, result + numTimes];
+    return [current, result];
     
 }
