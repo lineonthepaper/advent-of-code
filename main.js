@@ -21,7 +21,7 @@ fetch("./days.json")
             for (let part of day.parts) {
                 let partLink = partsP.appendChild(document.createElement("a"));
                 partLink.innerText = part;
-                partLink.href = 'day' + i + '/js/' + part.toLowerCase().replace(' ', '') + '/index.html';
+                partLink.href = 'day' + i + '/js/' + part.toLowerCase().replaceAll(' ', '') + '/index.html';
                 partsP.appendChild(document.createTextNode(" / "));
             }
 
