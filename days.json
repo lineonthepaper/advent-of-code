@@ -1,0 +1,18 @@
+[
+    {
+        "puzzle": "Secret Entrance",
+        "parts": ["Part 1", "Part 2", "Part 2 Alt"]
+    },
+    {
+        "puzzle": "Gift Shop",
+        "parts": ["Part 1", "Part 2"]
+    },
+    {
+        "puzzle": "Lobby",
+        "parts": ["Part 1", "Part 2"]
+    },
+    {
+        "puzzle": "Printing Department",
+        "parts": ["Part 1", "Part 2"]
+    }
+]
