@@ -4,7 +4,6 @@ fetch("./days.json")
 .then(response => response.json())
 .then(
     data => {
-        console.log(data);
         let i = 1;
         for (let day of data) {
             let h1 = daysOutput.appendChild(document.createElement("h1"));

@@ -1,4 +1,3 @@
-
 function process() {
     let input = document.getElementById("input").value;
     let splitInput = input.split("\n");

@@ -49,6 +49,7 @@ function findRolls(twoDArr) {
 
             colNum++;
         }
+        
         rowNum++;
     }
 
