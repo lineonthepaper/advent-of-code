@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { HashRouter, Routes, Route } from "react-router";
 import App from "./app";
 import './index.css';
 import days from './assets/days.json';
@@ -23,15 +23,14 @@ for (let year in days) {
   }
   routes.push(React.createElement(Route, {path: year}, dayRoutes));
 }
-// console.log(routes);
 
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route path="/" element={<Directory />} />
       {routes}
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
 );

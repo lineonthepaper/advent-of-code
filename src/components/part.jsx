@@ -1,15 +1,16 @@
 import { Link } from "react-router"
 import { formatPath } from "../utils/format"
+import React from "react";
 
 async function process(year, day, part) {
     let solution = await import(
-        /* @vite-ignore */
-        "../solution/" + year + "/day" + day + "/" + formatPath(part) + ".js"
+        `../solution/${year}/day${day}/${formatPath(part)}.js`
     );
     solution.default();
 }
 
 export default function Part({year, day, part}) {
+    
     return (
         <div className="px-8">
         <h1>{year} Day {day} {part}</h1>
