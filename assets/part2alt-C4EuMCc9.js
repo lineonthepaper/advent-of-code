@@ -1,0 +1,2 @@
+function f(){let o=document.getElementById("input").value.split(`
+`),[n,l]=[0,50],u=0;for(let r of o)[n,l,u]=m(r.substring(0,1),Number(r.substring(1)),n,l,u);let i=document.getElementById("output");i.innerText=u}function m(s,o,n,l,u){let i=0,r,t,e;s==="L"?(r=l,e=l,t=n):(r=n,e=n,t=l);let p=Math.min(e,o);return t+=o-p,e-=p,e===0&&r!==0&&i++,i+=Math.floor(t/100),t%=100,s==="L"?[t,e,u+i]:[e,t,u+i]}export{f as default};

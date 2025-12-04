@@ -1,0 +1,1 @@
+function o(){let u=document.getElementById("input").value.split(","),n=0;for(let t of u){let[i,r]=t.split("-");n+=s(i,r)}let e=document.getElementById("output");e.innerText=n}function s(l,u){let n=0;for(let e=Number(l);e<=Number(u);e++){let t=e+"";t.length%2===0&&t.substring(0,t.length/2)===t.substring(t.length/2)&&(n+=e)}return n}export{o as default};

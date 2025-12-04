@@ -1,0 +1,2 @@
+function d(){let u=document.getElementById("input").value.split(`
+`),n=[];for(let l of u)n.push(Array.from(l));let e=p(n),o=document.getElementById("output");o.innerText=e}function p(t){let u=JSON.stringify([[]]),n=0;for(;JSON.stringify(t)!=u;){u=JSON.stringify(t);let e=0;for(let o of t){let l=0;for(let s of o){let r=0;if(s==="."){l++;continue}for(let i=-1;i<2;i++)for(let f=-1;f<2;f++)i===0&&f===0||t[e+i]!==void 0&&t[e+i][l+f]==="@"&&r++;r<4&&(n++,t[e][l]="."),l++}e++}}return n}export{d as default};

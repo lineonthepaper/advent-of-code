@@ -1,0 +1,2 @@
+function c(){let u=document.getElementById("input").value.split(`
+`),t=[];for(let i of u)t.push(Array.from(i));let f=p(t),e=document.getElementById("output");e.innerText=f}function p(n){let u=0,t=0;for(let f of n){let e=0;for(let i of f){let r=0;if(i==="."){e++;continue}for(let l=-1;l<2;l++)for(let o=-1;o<2;o++)l===0&&o===0||n[t+l]!==void 0&&n[t+l][e+o]==="@"&&r++;r<4&&u++,e++}t++}return u}export{c as default};
