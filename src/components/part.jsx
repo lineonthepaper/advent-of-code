@@ -1,6 +1,5 @@
 import { Link } from "react-router"
 import { formatPath } from "../utils/format"
-import React from "react";
 
 async function process(year, day, part) {
     let solution = await import(

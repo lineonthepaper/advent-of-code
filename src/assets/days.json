@@ -15,6 +15,10 @@
         {
             "puzzle": "Printing Department",
             "parts": ["Part 1", "Part 2"]
+        },
+        {
+            "puzzle": "Cafeteria",
+            "parts": ["Part 1"]
         }
     ],
     "2024": [
