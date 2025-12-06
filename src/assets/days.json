@@ -19,6 +19,10 @@
         {
             "puzzle": "Cafeteria",
             "parts": ["Part 1", "Part 2"]
+        },
+        {
+            "puzzle": "Trash Compactor",
+            "parts": ["Part 1"]
         }
     ],
     "2024": [
