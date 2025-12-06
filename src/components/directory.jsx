@@ -25,7 +25,7 @@ export default function Directory() {
             days.push(
                 <Fragment key={year + "-" + dayNum}>
                 <h2>Day {dayNum}</h2>
-                <p>Puzzle: <a href={puzzleLink}>{day.puzzle}</a></p>
+                <p>Puzzle: <a target="_blank" href={puzzleLink}>{day.puzzle}</a></p>
                 {parts}
                 </Fragment>
             )
